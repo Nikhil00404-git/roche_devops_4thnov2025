@@ -106,3 +106,8 @@ aws_instance.example
 local_file.ashu-data
 
 ```
+
+### tfvar files auto loading options 
+
+<img src="tfvar1.png">
+
