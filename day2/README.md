@@ -74,3 +74,35 @@ Switched to branch 'dryrun-aws'
   193  git push origin  dryrun-aws 
 
 ```
+
+### merging more s3 backend changes
+
+```
+ 215  git switch dryrun-aws 
+  216  git branch 
+  217  git add .
+  218  git commit -m  "updated terraform tfstate to s3 + dynamodb "
+  219  git push origin dryrun-aws 
+  220  git switch master 
+  221  git merge dryrun-aws 
+  222  git push origin  master 
+
+```
+
+### terraform more commands 
+
+```
+ 252  terraform  state list
+  253  terraform  state  show aws_instance.example 
+  254  history 
+  255  terraform  state  
+  256  terraform  state list
+  257  terraform destroy -target=local_file.ashu-data
+  258  history 
+  259  terraform apply  -target=local_file.ashu-data
+  260  history 
+[root@ip-172-31-5-155 ashu-roche-devops-code]# terraform  state list
+aws_instance.example
+local_file.ashu-data
+
+```
