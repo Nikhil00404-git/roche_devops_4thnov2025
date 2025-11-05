@@ -32,3 +32,45 @@ akshay  anjali  ashu  ec2-user  hitesh  ketan   rpradhan  shobhit  tithi   vijay
 amit    arpit   dev   gayt      kd25    nikhil  sdas      singh    vermah  viresh
 
 ```
+
+## git repo branching 
+
+<img src="br1.png">
+
+### handling git repo branches 
+
+```
+[root@ip-172-31-5-155 ashu-roche-devops-code]# ls
+README.md  ec2.tf  output.tf  providers.tf  terraform.tfstate  terraform.tfstate.backup
+[root@ip-172-31-5-155 ashu-roche-devops-code]# 
+[root@ip-172-31-5-155 ashu-roche-devops-code]# 
+[root@ip-172-31-5-155 ashu-roche-devops-code]# git checkout  -b  dryrun-aws 
+Switched to a new branch 'dryrun-aws'
+[root@ip-172-31-5-155 ashu-roche-devops-code]# git branch 
+* dryrun-aws
+  master
+[root@ip-172-31-5-155 ashu-roche-devops-code]# git  checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[root@ip-172-31-5-155 ashu-roche-devops-code]# git branch 
+  dryrun-aws
+* master
+[root@ip-172-31-5-155 ashu-roche-devops-code]# git  switch  dryrun-aws 
+Switched to branch 'dryrun-aws'
+[root@ip-172-31-5-155 ashu-roche-devops-code]# git branch 
+* dryrun-aws
+  master
+[root@ip-172-31-5-155 ashu-roche-devops-code]# 
+
+```
+### pushing code to non master branch 
+
+```
+188  git branch 
+  189  git status 
+  190  git add .
+  191  git commit  -m "fixed ec2 tags and update output depends"
+  192  history 
+  193  git push origin  dryrun-aws 
+
+```
